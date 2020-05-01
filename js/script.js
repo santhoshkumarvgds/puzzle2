@@ -46,9 +46,11 @@ $(document).ready(function () {
         $(this).addClass("active");
         //console.log(clickedid);
         //console.log(pos[arrpos[clickedid]]);
+        if (imgclicksrc == null) {
         $("img", this).css({
-                backgroundImage: imgclicksrc
+                backgroundImage: "none"
          });
+         }
         if (imgclicksrc != null) {
             $("img", this).css({
 
