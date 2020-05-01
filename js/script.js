@@ -76,7 +76,7 @@ $(document).ready(function () {
         if (count == 9) {
             var value = 19 - score;
             if (value > 0) {
-                alert("you're WIN\nYour score is" + value);
+                alert("you're WIN\nYour score is :" + value);
                 var nameoftheperson = prompt("ENTER YOUR NAME");
                 localStorage.setItem("nameoftheperson", JSON.stringify(nameoftheperson));
                 if (localStorage.checkvalue != undefined) {
@@ -104,10 +104,16 @@ $(document).ready(function () {
 $("#file").change(function () {
     var reader = new FileReader();
     reader.onload = function (e) {
-        $(".right table img").css({
+        if(e.target.result.includes("image")){
+            $(".right table img").css({
             backgroundImage: "url('" + e.target.result + "')"
         });
         imgsrc = "url('" + e.target.result + "')";
+        }
+        else{
+            alert("Please choose image file");
+            document.getElementById("file").value='';
+        }
     }
     reader.readAsDataURL(this.files[0]);
 });
