@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Puzzle challenge</title>
+    <!-- meta tag-->
+    <meta charset="UTF-8">
+    <meta name="description" content="puzzle">
+    <meta name="author" content="Santhoshkumarvgds">
+    <meta property="og:image" content="https://raw.githubusercontent.com/santhoshkumarvgds/puzzle/master/assets/img/puzzleLogo.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="620">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0052d4">
+    <!-- css file -->
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <!-- js file -->
+    <script src="js/jquery.js"></script>
+    <!-- icon sile -->
+    <link rel="icon" href="assets/img/puzzleLogo.png" type="image/png">
+</head>
+
+<body>
+    <div class="puzzle">
+        <div class="title">
+            <h1 title="You can do it">Solve the puzzle</h1>
+            <h4>BEST SCORE</h4>
+            <p id="name"></p><br>
+            <lable>Choose your picture and solve the puzzle : </lable><br><br>
+            <input type="file" id="file">
+        </div>
+        
+        <!-- first table -->
+        <div class="left">
+            <div class="left-box">
+                <table>
+                    <tr>
+                        <td><img id="11"></td>
+                        <td><img id="12"></td>
+                        <td><img id="13"></td>
+                    </tr>
+                    <tr>
+                        <td><img id="14"></td>
+                        <td><img id="15"></td>
+                        <td><img id="16"></td>
+                    </tr>
+                    <tr>
+                        <td><img id="17"></td>
+                        <td><img id="18"></td>
+                        <td><img id="19"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <!--second table-->
+        <div class="right">
+            <div class="right-box">
+                <table>
+                    <tr>
+                        <td><img id="1" onclick="idval(this.id)"></td>
+                        <td><img id="2"  onclick="idval(this.id)"></td>
+                        <td><img id="3"  onclick="idval(this.id)"></td>
+                    </tr>
+                    <tr>
+                        <td><img id="4"  onclick="idval(this.id)"></td>
+                        <td><img id="5"  onclick="idval(this.id)"></td>
+                        <td><img id="6"  onclick="idval(this.id)"></td>
+                    </tr>
+                    <tr>
+                        <td><img id="7"  onclick="idval(this.id)"></td>
+                        <td><img id="8"  onclick="idval(this.id)"></td>
+                        <td><img id="9"  onclick="idval(this.id)"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <br>
+        <button>SUBMIT</button>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
