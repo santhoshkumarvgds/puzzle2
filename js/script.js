@@ -67,7 +67,7 @@ $(document).ready(function () {
         for (var i = 9, j = 1; i >= 1; i--, j++) {
             var mul = i + 10;
             var checkimgsrc = document.getElementById(mul).style.backgroundImage;
-            if (checkimgsrc) {
+            if (checkimgsrc && checkimgsrc!="none" ) {
                 countallclick += 1;
             }
             var checkimg = document.getElementById(mul).style.backgroundPosition;
