@@ -27,7 +27,7 @@ window.onload = function () {
     };
 
     numberGenerator(anArrayOfUniqueNumbers);
-   // console.log(arrpos); ANSWR index positoin
+    // console.log(arrpos); ANSWR index positoin
 }
 var thisval, score = 0,
     imgpos, imgclicksrc = null;
@@ -64,10 +64,10 @@ $(document).ready(function () {
             if (checkimgsrc) {
                 countallclick += 1;
             }
-            var checkimg =document.getElementById(mul).style.backgroundPosition;
-            
+            var checkimg = document.getElementById(mul).style.backgroundPosition;
+
             //console.log(checkimg+" "+pos[i-1]);
-            if (checkimg == pos[i-1]) {
+            if (checkimg == pos[i - 1]) {
                 //console.log(checkimg+" "+ pos[i-1]+" "+count);
                 count += 1;
             }
@@ -93,10 +93,10 @@ $(document).ready(function () {
             }
             window.location.reload();
         } else if (countallclick < 9) {
-            alert("Please fill "+(9-countallclick)+" more box");
+            alert("Please fill " + (9 - countallclick) + " more box");
         } else {
             alert("You're loss! Try again");
-           window.location.reload();
+            window.location.reload();
         }
 
     });
@@ -104,15 +104,15 @@ $(document).ready(function () {
 $("#file").change(function () {
     var reader = new FileReader();
     reader.onload = function (e) {
-        if(e.target.result.includes("image")){
+        if (e.target.result.includes("image")) {
             $(".right table img").css({
-            backgroundImage: "url('" + e.target.result + "')"
-        });
-        imgsrc = "url('" + e.target.result + "')";
-        }
-        else{
+                backgroundImage: "url('" + e.target.result + "')"
+            });
+            imgsrc = "url('" + e.target.result + "')";
+            alert("The image is proceesing...Its take few seconds..")
+        } else {
             alert("Please choose image file");
-            document.getElementById("file").value='';
+            document.getElementById("file").value = '';
         }
     }
     reader.readAsDataURL(this.files[0]);
