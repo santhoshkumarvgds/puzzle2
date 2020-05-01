@@ -78,10 +78,10 @@ $(document).ready(function () {
             if (value > 0) {
                 alert("you're WIN\nYour score is :" + value);
                 var nameoftheperson = prompt("ENTER YOUR NAME");
-                localStorage.setItem("nameoftheperson", JSON.stringify(nameoftheperson));
                 if (localStorage.checkvalue != undefined) {
                     var conditionval = JSON.parse(localStorage.getItem("score"));
-                    if (Number(conditionval) < value) {
+                    if (Number(conditionval) <= value) {
+                        localStorage.setItem("nameoftheperson", JSON.stringify(nameoftheperson));
                         localStorage.setItem("score", JSON.stringify(value));
                     }
                 } else {
