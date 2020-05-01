@@ -53,6 +53,7 @@ $(document).ready(function () {
          }
         if (imgclicksrc != null) {
             $("img", this).css({
+                backgroundImage : imgclicksrc,
 
                 backgroundPosition: pos[arrpos[clickedid] - 1]
             });
