@@ -102,6 +102,7 @@ $(document).ready(function () {
     });
 });
 $("#file").change(function () {
+    alert("The image is proceesing...Its take few seconds..");
     var reader = new FileReader();
     reader.onload = function (e) {
         if (e.target.result.includes("image")) {
@@ -109,7 +110,7 @@ $("#file").change(function () {
                 backgroundImage: "url('" + e.target.result + "')"
             });
             imgsrc = "url('" + e.target.result + "')";
-            alert("The image is proceesing...Its take few seconds..")
+            
         } else {
             alert("Please choose image file");
             document.getElementById("file").value = '';
