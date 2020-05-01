@@ -108,6 +108,9 @@ $(document).ready(function () {
     });
 });
 $("#file").change(function () {
+    $(".left img").css({
+                backgroundImage: "none"
+         });
     alert("The image is proceesing...Its take few seconds..");
     var reader = new FileReader();
     reader.onload = function (e) {
