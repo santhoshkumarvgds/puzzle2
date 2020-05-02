@@ -83,7 +83,8 @@ $(document).ready(function () {
             var value = 19 - score;
             if (value > 0) {
                 alert("you're WIN\nYour score is :" + value);
-                var nameoftheperson = prompt("ENTER YOUR NAME");
+                var theperson = prompt("ENTER YOUR NAME");
+                var nameoftheperson = theperson.substring(0, 15);
                 if (localStorage.checkvalue != undefined) {
                     var conditionval = JSON.parse(localStorage.getItem("score"));
                     if (Number(conditionval) <= value) {
