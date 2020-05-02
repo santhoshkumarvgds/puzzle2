@@ -2,6 +2,7 @@
     margin: 0px;
     padding: 0px;
     text-align: center;
+    word-wrap: break-word;
 }
 
 /*small screen*/
