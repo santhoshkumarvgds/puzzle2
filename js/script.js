@@ -92,6 +92,7 @@ $(document).ready(function () {
                         localStorage.setItem("score", JSON.stringify(value));
                     }
                 } else {
+                    localStorage.setItem("nameoftheperson", JSON.stringify(nameoftheperson));
                     localStorage.setItem("score", JSON.stringify(value));
                 }
                 localStorage.checkvalue = 1;
